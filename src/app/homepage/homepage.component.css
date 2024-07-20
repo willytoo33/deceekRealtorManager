@@ -1,0 +1,41 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+div {
+    border: 3px, solid, #0b0a0a;
+}
+
+.welcome-page {
+    height: 80vh;
+    background-color:azure;
+}
+
+.welcome-page p {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+.page-one {
+    height: 80vh;
+    background-color: (30, 50, 100);
+}
+
+.page-two {
+    height: 80vh;
+    background-color: rgb(61, 57, 83); 
+}
+
+.page-three {
+    height: 80vh;
+    background-color: rgb(160, 158, 174);   
+}
+
+.section {
+
+}
