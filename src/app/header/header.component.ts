@@ -20,4 +20,8 @@ export class HeaderComponent {
     this.menuValue = false;
     this.menu_icon = 'bi bi-list';
   }
+
+  // onScroll () => {
+
+  // }
 }

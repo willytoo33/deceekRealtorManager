@@ -10,16 +10,21 @@ div {
     border: 3px, solid, #0b0a0a;
 }
 
-.welcome-page {
-    height: 80vh;
-    background-color:azure;
+p {
+    color: rgb(150, 41, 41);
+    font-weight: bold; 
 }
 
-.welcome-page p {
-    text-align: center;
-    color: black;
-    font-weight: bold;
+.welcome-page {
+    height: 100vh;
+    background-color:azure;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
+
 
 .page-one {
     height: 80vh;
@@ -36,6 +41,3 @@ div {
     background-color: rgb(160, 158, 174);   
 }
 
-.section {
-
-}
