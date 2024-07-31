@@ -9,14 +9,14 @@
 
 :host {
     display: block;
-    padding-top: 120px;
+    padding-top: 60px;
 }
 
 body {
     font-family: "Open Sans", sans-serif;
     color: #272829;
-    height: calc(100vh-120px);
-    top: 120px;
+    height: calc(100vh-60px);
+    top: 60px;
 }
 
 a {
@@ -52,35 +52,49 @@ p {
 .hero-section {
     height: 100vh;
     background-color: white;
-    /* display: flex; */
+    display: flex;
     background-image: url(../../assets/AtticElevation.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    grid-template-areas:
-        "head head head"
-        "texts texts texts"
-        "texts texts texts"
-    ;
+    /* align-items: center; */
+    /* justify-content: space-between; */
 }
 
 .hero-heading {
-    justify-content: center;
-    grid-template-areas: "head";
-    height: 20vh;
-    display: grid;
-    place-items: center;
+    flex: 1;
+    margin-top: 30px;
+    margin: 10px;
+    padding: 10px;   
 }
-.hero-texts {
-    grid-template-areas: "texts";
-    height: 80vh;
-    grid-template-columns: 70% 30%;
-}
-
 
 .hero-heading h1 {
-    font-size: 60px;
-    color: black;
+    font-size: 100px;
+    font-weight: bolder;
+    color: #0b1586;
+    margin-top: 90px;
+}
+.hero-about {
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    align-self: center;
+}
+.hero-about p {
+    color: white;
+}
+.hero-quote {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    align-self: center;
+}
+.hero-quote p {
+    color: white;
 }
 
 .page-one {

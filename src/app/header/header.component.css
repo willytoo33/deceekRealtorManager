@@ -2,31 +2,18 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
     background: white;
-    height: 120px;
 }
-
 header {
-    padding: 10px;
     background: #ececec;
-}
-
-.fixed {
-    position: fixed;
-    width: 100%;
-    transition: 0.2s linear;
-    top: 0px;
-}
-
-.notfixed {
-    position: static;
-    transition: 0.2s linear;
-    top: -50px;
+    height: 60px;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo {
-    width: 100px;
+    height: 50px;
+    width: 50px;
 }
 
 .logo:hover {
@@ -35,27 +22,24 @@ header {
 
 .desktop-menu {
     margin-top: 20px;
+    /* display: flex; */
 }
 
 .desktop-menu ul {
     margin: 0;
-    /* justify-content: end; */
     gap: 0px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15px, 1fr));
-    /* align-items: center;
-    justify-content: center; */
 }
 
 .desktop-menu ul li {
     list-style-type: none;
     color: black;
-    /* font-size: 20px; */
-    padding: 10px;
     margin-left: 0;
-    /* justify-content: center;
-    align-items: center; */
-    /* transition: transform 0.2s ease-in-out, font-weight 0.2s ease-in-out, color 0.2s ease-in-out; */
+    margin-right: 10px;
+    align-items: center; 
+    font-weight: 500;
+    font-size: large    ;
 }
 
 .desktop-menu ul li:hover {
@@ -64,23 +48,12 @@ header {
     cursor: pointer;
     color: #363636;
     z-index: 1000;
-    transition: 0.4s ease-in-out;
+    transition: 0.1s ease-in-out;
 }
 
 .menu-icon {
     display: none;
 }
-
-/* .menu-list {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    justify-content: space-between;
-    text-align: center;
-    width: 100%;
-} */
 
 
 @media screen and (min-width: 128px) and (max-width: 900px) {
