@@ -1,3 +1,11 @@
+/*----------------------------------------------------------------------------------
+#Styles import
+-----------------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+
 /*---------------------------------------------------------------------------------
 # General
 ----------------------------------------------------------------------------------*/
@@ -13,8 +21,8 @@
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
-    color: #272829;
+    font-family: "Roboto", sans-serif;
+    background-color: #f9f9f9;
     top: 60px;
 }
 
@@ -26,15 +34,6 @@ a {
 a:hover {
     color: #067ded;
     text-decoration: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Raleway", sans-serif;
 }
 
 p {
@@ -57,18 +56,21 @@ p {
     background-repeat: no-repeat;
     background-position: center;
 }
+
 .hero-heading {
     flex: 1;
     margin-top: 30px;
     margin: 10px;
-    padding: 10px;   
+    padding: 10px;
 }
+
 .hero-heading h1 {
     font-size: 100px;
     font-weight: bolder;
     color: #0b1586;
     margin-top: 90px;
 }
+
 .hero-about {
     justify-content: center;
     align-items: center;
@@ -77,9 +79,11 @@ p {
     padding: 10px;
     align-self: center;
 }
+
 .hero-about p {
     color: white;
 }
+
 .hero-quote {
     flex: 1;
     align-items: center;
@@ -88,31 +92,116 @@ p {
     padding: 10px;
     align-self: center;
 }
+
 .hero-quote p {
     color: white;
 }
 
 .page-one {
     height: 80vh;
-    background-color: white;
 }
 
-.page-one .project-display {
+.project-display {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: center;
 }
 
-.page-one .project-display .project-container {
-    display: grid;
+.project-container {
+    background-color: white;
+    height: 70vh;
+    margin-top: 30px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(5, 99, 187, 0.3);
+    padding: 10px;
+    border: 1px solid #0563bb;
+}
+
+.project-container h5 {
+    text-align: center;
+}
+
+.project-one {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 10px;
+}
+
+.project-one img {
+    max-width: 70%;
+    max-height: 100%;
+    object-fit: contain;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.project-one h5 {
+    margin-top: 0px;
+}
+
+.progress-container {
+    position: relative;
+    width: 70%;
+    background-color: #e3e3e3;
+    border-radius: 10px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: aqua;
+    width: 0;
+    border-radius: 10px 0 0 10px;
+    transition: width 0.5s ease;
+}
+
+.progress-percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-weight: 400;
 }
 
 .page-two {
     height: 80vh;
-    background-color: rgb(61, 57, 83);
 }
 
 .page-three {
     height: 80vh;
-    background-color: rgb(160, 158, 174);
+}
+
+/*----------------------------------------------------------------------------
+# Mobile
+------------------------------------------------------------------------------*/
+@media (max-width: 768px) {
+
+    /* body {
+        font-family: "Roboto", sans-serif;
+        background-color:  #f9f9f9;
+        top: 60px;
+        width: 100%;
+    } */
+    .project-display {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .project-container {
+        background-color: white;
+        height: auto;
+        margin-top: 30px;
+        width: 90%;
+        border-radius: 10px;
+        align-items: center;
+        box-shadow: 3px 3px 5px rgba(5, 99, 187, 0.3);
+    }
 }

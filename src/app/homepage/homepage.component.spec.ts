@@ -10,7 +10,7 @@ describe('HomepageComponent', () => {
     await TestBed.configureTestingModule({
       imports: [HomepageComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(HomepageComponent);
     component = fixture.componentInstance;
@@ -21,3 +21,16 @@ describe('HomepageComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+
+function updateProgress(percentage: number) {
+  const progressBar = document.querySelector('.progress-bar') as HTMLElement;
+  const progressText = document.querySelector('progress-percentage') as HTMLElement;
+
+  if (progressBar && progressText) {
+    progressBar.style.width = `${percentage}%`;
+    progressText.textContent = `${percentage}%`;
+  }
+}
+
+updateProgress(75);
