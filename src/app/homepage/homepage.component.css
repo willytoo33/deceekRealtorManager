@@ -378,7 +378,6 @@ h6 {
     height: 50%;
     margin: 10px;
 }
-
 .container-items {
     display: flex;
     flex: 1;
@@ -386,7 +385,6 @@ h6 {
     height: 80%;
     justify-content: space-evenly;
 }
-
 .service-icon {
     width: 150px;
     height: 100px;
@@ -394,12 +392,10 @@ h6 {
     align-items: center;
     justify-content: center;
 }
-
 .service-icon:hover {
     scale: 1.1;
     transition: 0.1s ease-in;
 }
-
 .icon-style {
     font-size: 133px;
     color: var(--accent-color);
@@ -413,18 +409,14 @@ h6 {
         display: flex;
         flex-direction: column;
     }
-
     .service-header {
-        /* display: flex; */
         flex-direction: column;
     }
-
     .service-header-description {
         width: 100%;
         text-align: center;
         padding: 0;
     }
-
     .container-items {
         flex-direction: column;
     }
@@ -445,9 +437,6 @@ h6 {
     .services-section {
         height: auto;
     }
-    /* .container-items {
-        flex-wrap: wrap;
-    } */
     .service-item-container {
         flex-wrap: wrap;
     }
@@ -466,15 +455,12 @@ h6 {
 .testimonials-container {
     height: 100%;
     width: 100%;
-    /* border: 3px solid black; */
     padding: 3px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .testimonial-image-container {
-    /* border: 1px solid blue; */
-    /* flex-grow: 1; */
     width: 150px;
     height: 100px;
     display: flex;
@@ -484,7 +470,6 @@ h6 {
 }
 .testimonial-quote {
     text-decoration: italics;
-    /* border: 1.3px solid black; */
     flex-grow: 1;
     width: 70%;
     align-items: center;
@@ -492,7 +477,6 @@ h6 {
     display: flex;
 }
 .testimonial-quote-image {
-    /* object-fit: contain; */
     object-position: center;
     max-width: 100%;
     max-height: 100%;
@@ -500,10 +484,6 @@ h6 {
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    /* align-self: center;
-    align-content: center; */
-    /* padding: 1rem; */
-    /* border-radius: 100%; */
 }
 .image-container {
     flex-grow: 1;
@@ -511,7 +491,6 @@ h6 {
     max-height: 100px;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid green; */
 }
 .testimonial-about {
     display: flex;
@@ -519,7 +498,6 @@ h6 {
     align-items: center;
     text-align: center;
     text-decoration:wavy;
-    /* border: 3px solid blue; */
     justify-content: space-evenly;
     height: 70px;
 }
