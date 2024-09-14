@@ -28,13 +28,6 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(15px, 1fr));
 }
 
-/* .desktop-menu ul {
-    margin: 0;
-    gap: 0px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15px, 1fr));
-} */
-
 .desktop-menu  li {
     list-style-type: none;
     color: #0563bb;

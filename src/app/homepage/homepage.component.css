@@ -2,6 +2,7 @@
 #Styles import
 -----------------------------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 /*---------------------------------------------------------------------------------
 # General
 ----------------------------------------------------------------------------------*/
@@ -11,6 +12,13 @@
     box-sizing: border-box;
 }
 
+:root {
+    --background-color: #f3f3f3;
+    --container-color: hsl(0, 0%, 100%);
+    --accent-color: hsl(209, 95%, 38%);
+    --font-color: hsl(0, 0%, 0%);
+}
+
 :host {
     display: block;
     padding-top: 60px;
@@ -18,24 +26,37 @@
 
 body {
     font-family: "Roboto", sans-serif;
-    background-color: #f9f9f9;
+    background-color: var(--background-color);
     top: 60px;
 }
 
 a {
-    color: #0563bb;
+    color: var(--font-color);
     text-decoration: none;
 }
 
 a:hover {
-    color: #067ded;
+    color: var(--accent-color);
     text-decoration: none;
 }
 
 p {
-    color: #45505b;
+    color: var(--font-color);
     margin: 15px 0 0 0;
     font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--font-color);
+    /* font: "Roboto", sans-serif; */
+}
+.section-headings {
+    color: var(--accent-color);
 }
 
 /*---------------------------------------------------------------------------------
@@ -44,7 +65,7 @@ p {
 
 .hero-section {
     height: 100vh;
-    background-color: white;
+    /* background-color: white; */
     display: flex;
     background-image: url(../../assets/AtticElevation.jpg);
     background-size: cover;
@@ -62,7 +83,7 @@ p {
 .hero-heading h1 {
     font-size: 100px;
     font-weight: bolder;
-    color: #0b1586;
+    /* color: hsl(235, 85%, 28%); */
     margin-top: 90px;
 }
 
@@ -92,12 +113,17 @@ p {
     color: white;
 }
 
-.page-one {
+.project-portfolio {
     height: 80vh;
+    padding-top: 20px;
 }
+
 /**------------------------------------------------------------------------------
 #Project Article Display
 ---------------------------------------------------------------------------------*/
+.project-portfolio {
+    text-align: center;
+}
 .project-display {
     display: flex;
     flex-wrap: wrap;
@@ -106,14 +132,14 @@ p {
 }
 
 .project-container {
-    background-color: white;
+    background-color: var(--container-color);
     height: 70vh;
     margin-top: 30px;
     width: 30%;
     border-radius: 10px;
     box-shadow: 3px 3px 5px rgba(5, 99, 187, 0.3);
     padding: 10px;
-    border: 1px solid #0563bb;
+    border: 1px solid hsl(209, 95%, 38%);
 }
 
 .project-container h5 {
@@ -128,12 +154,15 @@ p {
     border-radius: 1rem;
 }
 
-.project-article img {
+.project-image-slider {
     width: 100%;
     height: 100%;
     object-fit: cover;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     border-radius: 1rem;
+    animation: imageSlider 10s infinite;
+    background-position: center;
+    background-size: cover;
 }
 
 .project-data-details {
@@ -154,7 +183,7 @@ p {
 
 .details-description {
     display: block;
-    margin-bottom: .25rem;
+    color: var(--font-color);
 }
 
 .project-data-details h4 {
@@ -173,32 +202,64 @@ p {
     text-decoration: underline;
 }
 
-/**----------------------------------------------------------------------
-#Project Exhibit Animation on Hover
-------------------------------------------------------------------------*/
+/* Breaking Points */
+@media screen and (max-width: 576px) {
+     .project-portfolio {
+        height: auto;
+        text-align: center;
+    }
+    .project-container {
+        width: 100%;
+        height: 400px;
+        margin: 5px;
+    }
+
+    .project-display {
+        box-sizing: border-box;
+        height: auto;
+        justify-content: center;
+    }
+}
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .project-display {
+        flex-wrap: wrap;
+        height: auto;
+        box-sizing: border-box;
+    }
+    .project-container {
+        flex-basis: 45%;
+    }
+    .project-portfolio {
+        height: auto;
+    }
+}
+/**Project Exhibit Animation on Hover*/
+
 .project-article:hover .project-data-details {
     animation: show-data 1s forwards;
     opacity: 1;
     transition: opacity .3s;
 }
+
 .project-article:hover {
     animation: remove-overflow 2s forwards;
 }
+
 .project-article:not(:hover) {
     animation: show-overflow 2s forwards;
 }
+
 .project-article:not(:hover) .project-data-details {
     animation: remove-data 1s forwards;
 
 }
 
-/**----------------------------------------------------------------------
-#Card Animation
--------------------------------------------------------------------------*/
-@keyframes show-data{
+/**Article Animation*/
+@keyframes show-data {
     50% {
         transform: translateY(-10rem);
     }
+
     100% {
         transform: translateY(-7rem);
     }
@@ -206,74 +267,274 @@ p {
 
 @keyframes remove-overflow {
     to {
-      overflow: initial;
+        overflow: initial;
     }
-  }
-  
-  @keyframes remove-data {
-    0% {
-      transform: translateY(-7rem);
-    }
-    50% {
-      transform: translateY(-10rem);
-    }
-    100% {
-      transform: translateY(.5rem);
-    }
-  }
-  
-  @keyframes show-overflow {
-    0% {
-      overflow: initial;
-      pointer-events: none;
-    }
-    50% {
-      overflow: hidden;
-    }
-  }
+}
 
-.page-two {
-    height: 80vh;
+@keyframes remove-data {
+    0% {
+        transform: translateY(-7rem);
+    }
+
+    50% {
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        transform: translateY(.5rem);
+    }
+}
+
+@keyframes show-overflow {
+    0% {
+        overflow: initial;
+        pointer-events: none;
+    }
+
+    50% {
+        overflow: hidden;
+    }
 }
 
 .page-three {
     height: 80vh;
 }
 
-/*----------------------------------------------------------------------------
-# Breaking Points
-------------------------------------------------------------------------------*/
-/* For small devices */
-@media screen and (max-width: 340px) {
-    .project-data-details {
-      width: 250px;
-      padding: 1rem;
+/**Slider Image Handler*/
+@keyframes imageSlider {
+    0% {
+        background-image: url('/assets/keldeckerStripMall/202409061.jpeg');
     }
-  }
-  
-  /* For medium devices */
-  @media screen and (min-width: 341px) and (max-width: 768px) {
-    .project-display {
+
+    25% {
+        background-image: url('/assets/keldeckerStripMall/202409062.jpeg');
+    }
+
+    50% {
+        background-image: url('/assets/keldeckerStripMall/202409102.jpeg');
+    }
+
+    75% {
+        background-image: url('/assets/keldeckerStripMall/202409103.jpeg');
+    }
+
+    100% {
+        background-image: url('/assets/keldeckerStripMall/202409061.jpeg');
+    }
+}
+
+/**-----------------------------------------------------------------------
+  #Services Section
+  -----------------------------------------------------------------------*/
+.services-section {
+    height: 100vh;
+}
+
+.services-container {
+    height: 100%;
+    margin: 3px;
+}
+
+.service-header {
+    text-align: center;
+    flex: content;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-header-description {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.service-icon-box {
+    text-align: center;
+    padding: 5px;
+    transition: all ease-in-out 0.1s;
+    background: #fff;
+    border: 1px transparent;
+    border-radius: 1rem;
+    height: 100%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.service-icon-box:hover {
+    border-color: #0563bb;
+    box-shadow: 3px 3px 3px 5px rgba(5, 99, 187, 0.3);
+}
+
+.service-item-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50%;
+    margin: 10px;
+}
+
+.container-items {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-evenly;
+}
+
+.service-icon {
+    width: 150px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-icon:hover {
+    scale: 1.1;
+    transition: 0.1s ease-in;
+}
+
+.icon-style {
+    font-size: 133px;
+    color: var(--accent-color);
+}
+.icon-style:hover {
+    cursor:pointer ;
+}
+/*Mobile Devices*/
+@media screen and (max-width: 576px) {
+    .services-container {
         display: flex;
         flex-direction: column;
-        width: 100%;
     }
-    .project-container {
+
+    .service-header {
+        /* display: flex; */
+        flex-direction: column;
+    }
+
+    .service-header-description {
         width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    .container-items {
+        flex-direction: column;
+    }
+
+    .services-section {
         height: auto;
     }
-  }
-  
-  /* For large devices */
-  @media screen and (min-width: 769px) and (max-width: 1120px){
-    .project-article img {
-      width: 100%;
+
+    .service-item-container {
+        flex-direction: column;
     }
-    .project-data-details {
-      width: 100%;
-      padding-inline: 2.5rem;
+
+    .service-icon-box {
+        height: 300px
     }
-    .project-article:hover img {
-        width: 100%;
+}
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .services-section {
+        height: auto;
     }
-  }
+    /* .container-items {
+        flex-wrap: wrap;
+    } */
+    .service-item-container {
+        flex-wrap: wrap;
+    }
+    .service-icon-box {
+        flex-basis: 45%;
+    }
+}
+
+/**-----------------------------------------------------------------------------------
+#Testimonails Section
+------------------------------------------------------------------------------------*/
+.testimonial-section {
+    height: 50vh;
+    margin: 3px; 
+}
+.testimonials-container {
+    height: 100%;
+    width: 100%;
+    /* border: 3px solid black; */
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.testimonial-image-container {
+    /* border: 1px solid blue; */
+    /* flex-grow: 1; */
+    width: 150px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+.testimonial-quote {
+    text-decoration: italics;
+    /* border: 1.3px solid black; */
+    flex-grow: 1;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.testimonial-quote-image {
+    /* object-fit: contain; */
+    object-position: center;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    /* align-self: center;
+    align-content: center; */
+    /* padding: 1rem; */
+    /* border-radius: 100%; */
+}
+.image-container {
+    flex-grow: 1;
+    max-width: 100px;
+    max-height: 100px;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid green; */
+}
+.testimonial-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration:wavy;
+    /* border: 3px solid blue; */
+    justify-content: space-evenly;
+    height: 70px;
+}
+.testimonial-about-name {
+    font-weight: 700;
+}
+.testimonial-about-building {
+    text-decoration: underline;
+    font-style: italic;
+}
+.quote-icon {
+    color: aqua;
+    font-size: 40px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+

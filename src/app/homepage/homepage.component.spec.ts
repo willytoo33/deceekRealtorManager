@@ -23,14 +23,14 @@ describe('HomepageComponent', () => {
 });
 
 
-function updateProgress(percentage: number) {
-  const progressBar = document.querySelector('.progress-bar') as HTMLElement;
-  const progressText = document.querySelector('progress-percentage') as HTMLElement;
+// function updateProgress(percentage: number) {
+//   const progressBar = document.querySelector('.progress-bar') as HTMLElement;
+//   const progressText = document.querySelector('progress-percentage') as HTMLElement;
 
-  if (progressBar && progressText) {
-    progressBar.style.width = `${percentage}%`;
-    progressText.textContent = `${percentage}%`;
-  }
-}
+//   if (progressBar && progressText) {
+//     progressBar.style.width = `${percentage}%`;
+//     progressText.textContent = `${percentage}%`;
+//   }
+// }
 
-updateProgress(75);
+// updateProgress(75);
