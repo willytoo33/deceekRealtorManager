@@ -11,41 +11,34 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 :root {
     --background-color: #f3f3f3;
     --container-color: hsl(0, 0%, 100%);
     --accent-color: hsl(209, 95%, 38%);
     --font-color: hsl(0, 0%, 0%);
 }
-
 :host {
     display: block;
     padding-top: 60px;
 }
-
 body {
     font-family: "Roboto", sans-serif;
     background-color: var(--background-color);
     top: 60px;
 }
-
 a {
     color: var(--font-color);
     text-decoration: none;
 }
-
 a:hover {
     color: var(--accent-color);
     text-decoration: none;
 }
-
 p {
     color: var(--font-color);
     margin: 15px 0 0 0;
     font-size: 16px;
 }
-
 h1,
 h2,
 h3,
@@ -53,10 +46,11 @@ h4,
 h5,
 h6 {
     color: var(--font-color);
-    /* font: "Roboto", sans-serif; */
 }
 .section-headings {
     color: var(--accent-color);
+    text-align: center;
+    font-weight: 500;
 }
 
 /*---------------------------------------------------------------------------------
@@ -65,7 +59,6 @@ h6 {
 
 .hero-section {
     height: 100vh;
-    /* background-color: white; */
     display: flex;
     background-image: url(../../assets/AtticElevation.jpg);
     background-size: cover;
@@ -86,7 +79,6 @@ h6 {
     /* color: hsl(235, 85%, 28%); */
     margin-top: 90px;
 }
-
 .hero-about {
     justify-content: center;
     align-items: center;
@@ -95,11 +87,9 @@ h6 {
     padding: 10px;
     align-self: center;
 }
-
 .hero-about p {
     color: white;
 }
-
 .hero-quote {
     flex: 1;
     align-items: center;
@@ -108,11 +98,9 @@ h6 {
     padding: 10px;
     align-self: center;
 }
-
 .hero-quote p {
     color: white;
 }
-
 .project-portfolio {
     height: 80vh;
     padding-top: 20px;
@@ -130,7 +118,6 @@ h6 {
     justify-content: space-evenly;
     align-items: center;
 }
-
 .project-container {
     background-color: var(--container-color);
     height: 70vh;
@@ -141,11 +128,9 @@ h6 {
     padding: 10px;
     border: 1px solid hsl(209, 95%, 38%);
 }
-
 .project-container h5 {
     text-align: center;
 }
-
 .project-article {
     width: 100%;
     height: 100%;
@@ -153,7 +138,6 @@ h6 {
     overflow: hidden;
     border-radius: 1rem;
 }
-
 .project-image-slider {
     width: 100%;
     height: 100%;
@@ -164,7 +148,6 @@ h6 {
     background-position: center;
     background-size: cover;
 }
-
 .project-data-details {
     width: 290px;
     height: 130px;
@@ -180,18 +163,15 @@ h6 {
     transition: opacity 1s 1s;
     opacity: 0;
 }
-
 .details-description {
     display: block;
     color: var(--font-color);
 }
-
 .project-data-details h4 {
     font-size: medium;
     font-weight: 500;
     margin-bottom: .75rem;
 }
-
 .project-call-to-action {
     text-decoration: none;
     font-weight: 400;
@@ -240,18 +220,14 @@ h6 {
     opacity: 1;
     transition: opacity .3s;
 }
-
 .project-article:hover {
     animation: remove-overflow 2s forwards;
 }
-
 .project-article:not(:hover) {
     animation: show-overflow 2s forwards;
 }
-
 .project-article:not(:hover) .project-data-details {
     animation: remove-data 1s forwards;
-
 }
 
 /**Article Animation*/
@@ -329,12 +305,10 @@ h6 {
 .services-section {
     height: 100vh;
 }
-
 .services-container {
     height: 100%;
     margin: 3px;
 }
-
 .service-header {
     text-align: center;
     flex: content;
@@ -344,12 +318,10 @@ h6 {
     justify-content: center;
     align-items: center;
 }
-
 .service-header-description {
     padding-left: 100px;
     padding-right: 100px;
 }
-
 .service-icon-box {
     text-align: center;
     padding: 5px;
@@ -365,12 +337,10 @@ h6 {
     align-items: center;
     box-sizing: border-box;
 }
-
 .service-icon-box:hover {
     border-color: #0563bb;
     box-shadow: 3px 3px 3px 5px rgba(5, 99, 187, 0.3);
 }
-
 .service-item-container {
     display: flex;
     align-items: center;
@@ -451,6 +421,13 @@ h6 {
 .testimonial-section {
     height: 50vh;
     margin: 3px; 
+    
+    background-image: url(/assets/sample9.jpg);
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    border-radius: 1rem;
 }
 .testimonials-container {
     height: 100%;
@@ -515,4 +492,29 @@ h6 {
     vertical-align: middle;
 }
 
+/**-----------------------------------------------------------------------------------
+#Contact Section
+------------------------------------------------------------------------------------*/
+.contact-section {
+    border: 0.5px solid black;
+    border-radius: 1.5rem;
+    height: 70vh;
+    box-sizing: border-box;
+    background-image: url(/assets/sample9.jpg);
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;  
+}
+.contact-section-container {
+    width: 100%;
+    height: 100%;
+}
 
+
+/**-----------------------------------------------------------------------------------
+#Footer Section
+------------------------------------------------------------------------------------*/
+.footer-section {
+    height: 50vh;
+}
