@@ -1,36 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header</title>
-</head>
-
-<body>
-    <header>  
-            <div class="row">
-                <div class="col-md-6 col-sm-6 col-6">
-                    <div class="logo-container">
-                        <img src="assets/deceekLogo.svg" alt="Deceek Logo" class="logo">
-                    </div>
-                </div>
-        
-                <div class="col-md-6 col-sm-6 col-6 text-end">
-                    <div class="menu-icon" (click)="toggleMenu()">
-                        <i class="{{menu_icon}}"></i>
-                    </div>
-                    <div class="desktop-menu" [class.mobile-menu]="menuValue">
-                        <!-- <ul> -->
-                            <li (click)="(closeMenu())">Construction</li>
-                            <li (click)="(closeMenu())">Projects</li>
-                            <li (click)="(closeMenu())">Properties</li>
-                            <li (click)="(closeMenu())">About</li>
-                        <!-- </ul> -->
-                    </div>
-                </div>
+<header>
+    <div class="row">
+        <div class="col-md-6 col-sm-6 col-6">
+            <div class="logo-container">
+                <img src="assets/deceekLogo.svg" alt="Deceek Logo" class="logo">
+            </div>
         </div>
-    </header>
-</body>
 
-</html>
+        <div class="col-md-6 col-sm-6 col-6 text-end">
+            <div class="menu-icon" (click)="toggleMenu()">
+                <i class="{{menu_icon}}"></i>
+            </div>
+            <div class="desktop-menu" [class.mobile-menu]="menuValue">
+                <!-- <ul> -->
+                <li (click)="(closeMenu())">Construction</li>
+                <li (click)="(closeMenu())">Projects</li>
+                <li (click)="(closeMenu())">Properties</li>
+                <li (click)="(closeMenu())">About</li>
+                <!-- </ul> -->
+            </div>
+        </div>
+    </div>
+</header>

@@ -34,28 +34,46 @@
     </div>
     <div class="input-container">
         <div class="contact-input-container">
-            <form>
+            <form (ngSubmit)="onSubmit()" novalidate>
                 <div class="input-container-name">
-                    <!-- <div> -->
-                        <input type="text" id="firstname" name="firstname" placeholder="Your Name">
-                    <!-- </div> -->
-                    <!-- <div>
-                        <input type="text" id="lastname" name="lastname" placeholder="Last Name">
-                    </div> -->
+                        <input 
+                        type="text" 
+                        id="firstname" 
+                        name="firstname" 
+                        placeholder="Your Name"
+                        [(ngModel)]="name"
+                        >
                 </div>
 
                 <div class="input-container-mail">
                     <div>
-                        <input type="email" id="email" name="email" placeholder="Email">
+                        <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="Email"
+                        [(ngModel)]="email"
+                        >
                     </div>
 
                     <div>
-                        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Phone Number">
+                        <input 
+                        type="tel" 
+                        id="phoneNumber" 
+                        name="phoneNumber" 
+                        placeholder="Phone Number"
+                        [(ngModel)]="phoneNumber"
+                        >
                     </div>
                 </div>
                 <div class="input-container-message">
-                    <textarea id="message" name="message" placeholder="Leave Your Message.."></textarea>
-                    <button>Submit</button>
+                    <textarea 
+                    id="message" 
+                    name="message" 
+                    placeholder="Leave Your Message.."
+                    [(ngModel)]="message"
+                    ></textarea>
+                    <button type="submit">Submit</button>
                 </div>
             </form>
         </div>
