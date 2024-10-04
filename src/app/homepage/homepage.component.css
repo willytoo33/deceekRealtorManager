@@ -7,7 +7,7 @@
 # General
 ----------------------------------------------------------------------------------*/
 * {
-    margin: 0;
+    margin: 5px;
     padding: 0;
     box-sizing: border-box;
 }
@@ -25,6 +25,7 @@
     font-family: "Roboto", sans-serif;
     background-color: var(--background-color);
     top: 60px;
+    box-sizing: border-box;
 }
 a {
     color: var(--font-color);
@@ -36,7 +37,7 @@ a:hover {
 }
 p {
     color: var(--font-color);
-    margin: 15px 0 0 0;
+    /* margin: 15px 0 0 0; */
     font-size: 16px;
 }
 h1,
@@ -59,77 +60,77 @@ h6 {
 
 .hero-section {
     height: 100vh;
-    display: flex;
-    background-image: url(../../assets/AtticElevation.jpg);
+    width: 100%;
+    margin-left: 0;
+    background-image: url(../../assets/AtticElevation.jpg),  linear-gradient(to bottom, white, black);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-blend-mode: multiply;  
+    display: flex;
+    flex-direction: row;  
 }
-
 .hero-heading {
+    border: 1px solid blue;
     flex: 1;
-    margin-top: 30px;
-    margin: 10px;
-    padding: 10px;
-}
-
-.hero-heading h1 {
-    font-size: 100px;
-    font-weight: bolder;
-    /* color: hsl(235, 85%, 28%); */
-    margin-top: 90px;
-}
-.hero-about {
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    margin: 10px;
-    padding: 10px;
-    align-self: center;
-}
-.hero-about p {
-    color: white;
+    display: flex;
+    flex-direction: column;
 }
 .hero-quote {
+    border: 1px solid yellow;
     flex: 1;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    padding: 10px;
-    align-self: center;
+}
+.hero-heading-title {
+    color: #fff;
+    border: 1px solid red;
+    width: auto;
+    height: auto;
+}
+.hero-heading-subtitle {
+    border: 1px solid green;
+
 }
 .hero-quote p {
     color: white;
 }
-.project-portfolio {
-    height: 80vh;
-    padding-top: 20px;
-}
-
 /**------------------------------------------------------------------------------
-#Project Article Display
+#Project Portfolio Section 
 ---------------------------------------------------------------------------------*/
 .project-portfolio {
-    text-align: center;
+    /* text-align: center; */
+    margin: 0px;
+    /* border: 1px solid red; */
+    height: 80vh;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+}
+.portfolio-heading-holder {
+    height: 10%;
+    /* border: 1px solid yellow; */
 }
 .project-display {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: space-evenly;
-    align-items: center;
+    /* align-items: center; */
+    height: 90%;
+    /* flex: 1; */
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    padding-bottom: 5px;
 }
 .project-container {
     background-color: var(--container-color);
-    height: 70vh;
-    margin-top: 30px;
+    height: 100%;
     width: 30%;
-    border-radius: 10px;
+    border-radius: 1rem;
     box-shadow: 3px 3px 5px rgba(5, 99, 187, 0.3);
-    padding: 10px;
+    padding: 5px 5px 5px 5px;
     border: 1px solid hsl(209, 95%, 38%);
-}
-.project-container h5 {
-    text-align: center;
+    display: flex;
 }
 .project-article {
     width: 100%;
@@ -137,16 +138,24 @@ h6 {
     position: relative;
     overflow: hidden;
     border-radius: 1rem;
+    padding: 0px;
+    box-sizing: border-box;
+    /* margin-bottom: 7px; */
+    /* padding-bottom: 3px; */
+
+    /* border: 1px solid red; */
 }
 .project-image-slider {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); */
     border-radius: 1rem;
     animation: imageSlider 10s infinite;
     background-position: center;
     background-size: cover;
+    box-sizing: border-box;
+    margin: 0;
 }
 .project-data-details {
     width: 290px;
@@ -162,10 +171,12 @@ h6 {
     margin-inline: auto;
     transition: opacity 1s 1s;
     opacity: 0;
+    margin-top: 0;
 }
 .details-description {
     display: block;
     color: var(--font-color);
+    margin-top: 0;
 }
 .project-data-details h4 {
     font-size: medium;
