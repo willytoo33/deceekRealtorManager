@@ -1,85 +1,84 @@
 :host {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #edf1fe;
 }
 header {
-    background: white;
-    height: 60px;
-    top: 0;
-    z-index: 1000;
-    border: 3px solid white;
-    box-shadow: 3px 3px 5px rgba(241, 234, 234, 0.63);
+  background: #edf1fe;
+  height: 60px;
+  top: 0;
+  z-index: 1000;
+  border: 3px solid #edf1fe;
+  box-shadow: 3px 3px 5px rgba(241, 234, 234, 0.63);
 }
 
 .logo {
-    height: 50px;
-    width: 50px;
+  height: 50px;
+  width: 50px;
 }
 
 .logo:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .desktop-menu {
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15px, 1fr));
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15px, 1fr));
 }
 
-.desktop-menu  li {
-    list-style-type: none;
-    color: #0563bb;
-    /* margin-left: 0; */
-    margin-right: 10px;
-    align-items: center; 
-    font-weight: 500;
-    font-size: large    ;
+.desktop-menu li {
+  list-style-type: none;
+  color: #0563bb;
+  /* margin-left: 0; */
+  margin-right: 10px;
+  align-items: center;
+  font-weight: 500;
+  font-size: large;
 }
 
-.desktop-menu  li:hover {
-    transform: scale(1.1);
-    font-weight: bold;
-    cursor: pointer;
-    color: #363636;
-    z-index: 1000;
-    transition:  ease-in-out;
+.desktop-menu li:hover {
+  transform: scale(1.1);
+  font-weight: bold;
+  cursor: pointer;
+  color: #363636;
+  z-index: 1000;
+  transition: ease-in-out;
 }
 
 .menu-icon {
-    display: none;
+  display: none;
 }
 
-
 @media screen and (min-width: 128px) and (max-width: 900px) {
-    .desktop-menu {
-        position: fixed;
-        right: -300px;
-        top: 64px;
-        background: #ececec;
-        width: 280px;
-        height: 100%;
-        transition: 0.4s ease-in-out;
-    }
+  .desktop-menu {
+    position: fixed;
+    right: -300px;
+    top: 64px;
+    background: #edf1fe;
+    width: 280px;
+    height: 100%;
+    transition: 0.4s ease-in-out;
+  }
 
-    .desktop-menu ul li {
-        display: block;
-        text-align: left;
-        padding: 10px 0px 10px 26px;
-        margin: 0px;
-        border-bottom: 1px solid grey;
-    }
+  .desktop-menu ul li {
+    display: block;
+    text-align: left;
+    padding: 10px 0px 10px 26px;
+    margin: 0px;
+    border-bottom: 1px solid grey;
+  }
 
-    .menu-icon {
-        display: block;
-        color: black;
-        font-size: 40px;
-        padding: 10px;
-    }
+  .menu-icon {
+    display: block;
+    color: black;
+    font-size: 40px;
+    padding: 10px;
+  }
 
-    .mobile-menu {
-        right: 0;
-        transition: 0.4s ease-in-out;
-    }
+  .mobile-menu {
+    right: 0;
+    transition: 0.4s ease-in-out;
+  }
 }
