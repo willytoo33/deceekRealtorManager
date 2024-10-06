@@ -3,12 +3,12 @@
   top: 0;
   width: 100%;
   background: #edf1fe;
+  z-index: 100000;
 }
 header {
   background: #edf1fe;
   height: 60px;
   top: 0;
-  z-index: 1000;
   border: 3px solid #edf1fe;
   box-shadow: 3px 3px 5px rgba(241, 234, 234, 0.63);
 }
