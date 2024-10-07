@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { HomepageComponent } from './homepage.component';
 
 describe('HomepageComponent', () => {
@@ -8,9 +7,8 @@ describe('HomepageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HomepageComponent]
-    })
-      .compileComponents();
+      imports: [HomepageComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(HomepageComponent);
     component = fixture.componentInstance;
@@ -21,7 +19,6 @@ describe('HomepageComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-
 
 // function updateProgress(percentage: number) {
 //   const progressBar = document.querySelector('.progress-bar') as HTMLElement;

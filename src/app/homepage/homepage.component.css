@@ -155,6 +155,9 @@ h6 {
   color: #edf1fe;
   font-style: italic;
 }
+/** Breaking Points **/
+/* @media screen and (min-width: 577px) and (max-width: 992px) {
+} */
 
 /**------------------------------------------------------------------------------
 #Project Portfolio Section 
@@ -273,18 +276,27 @@ h6 {
 }
 
 @media screen and (min-width: 577px) and (max-width: 992px) {
-  .project-display {
-    flex-wrap: wrap;
-    height: auto;
+  .project-portfolio {
+    height: 80vh;
+    border: 1px solid red;
     box-sizing: border-box;
+  }
+  .project-display {
+    /* flex-wrap: wrap; */
+    /* height: auto; */
+    /* box-sizing: border-box; */
+    /* overflow-y: scroll; */
+    /* display: flex; */
+    /* overflow: scroll; */
+    justify-content: flex-start;
+    /* align-items: center; */
+    box-sizing: initial;
   }
 
   .project-container {
-    flex-basis: 45%;
-  }
-
-  .project-portfolio {
-    height: auto;
+    /* flex-basis: 45%; */
+    /* box-sizing: border-box; */
+    width: 60%;
   }
 }
 
