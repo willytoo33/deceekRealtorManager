@@ -4,8 +4,6 @@ import { HeaderComponent } from './header/header.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FooterComponent } from './footer/footer.component';
-// import { SwiperModule } from 'swiper/angular';
-import { SwiperModule } from 'swiper/angular';
 
 @Component({
   selector: 'app-root',

@@ -7,7 +7,7 @@
 # General
 ----------------------------------------------------------------------------------*/
 * {
-  margin: 5px;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -180,6 +180,8 @@ h6 {
   height: 90%;
   box-sizing: border-box;
   padding-bottom: 5px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .project-container {
@@ -256,14 +258,24 @@ h6 {
 }
 
 /* Breaking Points */
-@media screen and (max-width: 576px) {
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  /* .project-display {
+    flex-direction: column;
+    flex-wrap: wrap;
+  } */
+
+  /* .project-container {
+    width: 400px;
+  } */
   .project-portfolio {
     height: auto;
     text-align: center;
   }
 
   .project-container {
-    width: 100%;
+    /* width: 100%; */
+    max-width: 50%;
+    min-width: 400px;
     height: 400px;
     margin: 5px;
   }
@@ -274,29 +286,23 @@ h6 {
     justify-content: center;
   }
 }
-
-@media screen and (min-width: 577px) and (max-width: 992px) {
+@media screen and (max-width: 576px) {
   .project-portfolio {
-    height: 80vh;
-    border: 1px solid red;
-    box-sizing: border-box;
-  }
-  .project-display {
-    /* flex-wrap: wrap; */
-    /* height: auto; */
-    /* box-sizing: border-box; */
-    /* overflow-y: scroll; */
-    /* display: flex; */
-    /* overflow: scroll; */
-    justify-content: flex-start;
-    /* align-items: center; */
-    box-sizing: initial;
+    height: auto;
+    text-align: center;
   }
 
   .project-container {
-    /* flex-basis: 45%; */
-    /* box-sizing: border-box; */
-    width: 60%;
+    width: 100%;
+    max-width: 450px;
+    height: 400px;
+    margin: 5px;
+  }
+
+  .project-display {
+    box-sizing: border-box;
+    height: auto;
+    justify-content: center;
   }
 }
 
