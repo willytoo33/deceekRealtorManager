@@ -649,7 +649,7 @@ Breaking Points
 .contact-section {
   border: 0.5px solid white;
   border-radius: 1.5rem;
-  height: 70vh;
+  height: auto;
   box-sizing: border-box;
   background-image: url(/assets/sample9.jpg);
   background-size: cover;
@@ -665,7 +665,7 @@ Breaking Points
 
 .contact-section-container {
   width: 100%;
-  height: max-content;
+  height: 90%;
   box-sizing: border-box;
 }
 
