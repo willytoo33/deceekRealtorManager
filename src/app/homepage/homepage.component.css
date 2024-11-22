@@ -400,6 +400,7 @@ h6 {
   -----------------------------------------------------------------------*/
 .services-section {
   height: 100vh;
+  box-sizing: border-box;
 }
 
 .services-container {
@@ -482,10 +483,24 @@ h6 {
 }
 
 /*Mobile Devices*/
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  .services-section {
+    height: auto;
+  }
+
+  .service-item-container {
+    flex-wrap: wrap;
+  }
+
+  .service-icon-box {
+    flex-basis: 45%;
+  }
+}
 @media screen and (max-width: 576px) {
   .services-container {
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
   }
 
   .service-header {
@@ -515,26 +530,13 @@ h6 {
   }
 }
 
-@media screen and (min-width: 577px) and (max-width: 992px) {
-  .services-section {
-    height: auto;
-  }
-
-  .service-item-container {
-    flex-wrap: wrap;
-  }
-
-  .service-icon-box {
-    flex-basis: 45%;
-  }
-}
-
 /**-----------------------------------------------------------------------------------
 #Testimonails Section
 ------------------------------------------------------------------------------------*/
 .testimonial-section {
   height: 50vh;
   margin: 3px;
+  padding: 1px;
 
   background-image: url(/assets/sample9.jpg);
   background-size: cover;
@@ -542,15 +544,19 @@ h6 {
   background-repeat: no-repeat;
   background-attachment: fixed;
   border-radius: 1rem;
+
+  box-sizing: border-box;
 }
 
 .testimonials-container {
-  height: 100%;
+  max-height: 100%;
   width: 100%;
   padding: 3px;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .testimonial-image-container {
@@ -559,7 +565,6 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 15px;
 }
 
 .testimonial-quote {
@@ -569,6 +574,9 @@ h6 {
   align-items: center;
   justify-content: center;
   display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1px;
 }
 
 .testimonial-quote-image {
@@ -615,6 +623,26 @@ h6 {
   vertical-align: middle;
 }
 
+/**
+Breaking Points
+**/
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  .testimonial-quote {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .testimonial-section {
+    height: fit-content;
+    max-height: 70vh;
+  }
+  .testimonial-quote {
+    width: 100%;
+  }
+}
+
 /**-----------------------------------------------------------------------------------
 #Contact Section
 ------------------------------------------------------------------------------------*/
@@ -637,13 +665,23 @@ h6 {
 
 .contact-section-container {
   width: 100%;
-  height: 90%;
+  height: max-content;
   box-sizing: border-box;
 }
+
+/***
+Breaking Points
+**/
+/* @media screen and (max-width: 576px) {
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+  }
+} */
 
 /**-----------------------------------------------------------------------------------
 #Footer Section
 ------------------------------------------------------------------------------------*/
 .footer-section {
-  height: 20vh;
+  height: 50px;
 }

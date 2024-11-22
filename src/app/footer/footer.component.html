@@ -1,25 +1,36 @@
 <div class="footer-container">
-    <div class="trademark-container">
-        <p>&copy; {{ year }} {{ company }}. All Rights Reserved</p>
-    </div>
+  <div class="trademark-container">
+    <p class="trademark-text">
+      &copy; {{ year }} {{ company }}. All Rights Reserved
+    </p>
+  </div>
 
-    <div class="logo-container">
+  <!-- <div class="logo-container">
         <img src="/assets/Deceek-Logo.png" alt="Logo" class="logo-image">
-    </div>
+    </div> -->
 
-    <div class="chatbox-container">
-        <!-- <p>Let's Chat!</p> -->
-        <div>
-            <fa-icon [icon]="faLinkedin" style="color: blue; font-size: 40px;"></fa-icon>
-            <a href=""></a>
-        </div>
-        <div>
-            <fa-icon [icon]="faInstagram" style="color: #FD1D1D; font-size: 40px;"></fa-icon>
-        </div>
-        <div>
-            <fa-icon [icon]="faWhatsapp" style="color: #25D366; font-size: 40px;"></fa-icon>
-        </div>
-        
+  <div class="chatbox-container">
+    <div>
+      <fa-icon
+        [icon]="faLinkedin"
+        class="fa-icon-style"
+        style="color: blue"
+      ></fa-icon>
+      <a href=""></a>
     </div>
-
+    <div>
+      <fa-icon
+        [icon]="faInstagram"
+        class="fa-icon-style"
+        style="color: #fd1d1d"
+      ></fa-icon>
+    </div>
+    <div>
+      <fa-icon
+        [icon]="faWhatsapp"
+        class="fa-icon-style"
+        style="color: #25d366"
+      ></fa-icon>
+    </div>
+  </div>
 </div>

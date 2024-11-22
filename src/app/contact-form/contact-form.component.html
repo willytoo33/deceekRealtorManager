@@ -1,81 +1,79 @@
 <div class="contact-container">
-    <div class="links-container">
-        <div class="link-contents">
-            <li class="link-item">
-                <span class="material-symbols-outlined contact-section-icons">
-                    call
-                </span>
-                <div>
-                    <h5>Call:</h5>
-                    <p>+254720101345</p>
-                </div>
-            </li>
-            <li class="link-item">
-                <span class="material-symbols-outlined contact-section-icons">
-                    mail
-                </span>
-                <div>
-                    <h5>Mail:</h5>
-                    <p> willytoo33&#64;gmail.com</p>
-                </div>
-            </li>
-            <li class="link-item">
-                <span class="material-symbols-outlined contact-section-icons">
-                    near_me
-                </span>
-                <div>
-                    <h5>Location:</h5>
-                    <p> Kimumu, Uasin Gishu County, Kenya</p>
-                </div>
-                
-            </li>
+  <div class="links-container">
+    <div class="link-contents">
+      <li class="link-item">
+        <span class="material-symbols-outlined contact-section-icons">
+          call
+        </span>
+        <div>
+          <h5>Call:</h5>
+          <p class="link-item-lead">+254720101345</p>
+        </div>
+      </li>
+      <li class="link-item">
+        <span class="material-symbols-outlined contact-section-icons">
+          mail
+        </span>
+        <div>
+          <h5>Mail:</h5>
+          <p class="link-item-lead">willytoo33&#64;gmail.com</p>
+        </div>
+      </li>
+      <li class="link-item">
+        <span class="material-symbols-outlined contact-section-icons">
+          near_me
+        </span>
+        <div>
+          <h5>Location:</h5>
+          <p>Kimumu, Uasin Gishu County, Kenya</p>
+        </div>
+      </li>
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="contact-input-container">
+      <form (ngSubmit)="onSubmit()" novalidate>
+        <div class="input-container-name">
+          <input
+            type="text"
+            id="firstname"
+            name="firstname"
+            placeholder="Your Name"
+            [(ngModel)]="name"
+          />
         </div>
 
-    </div>
-    <div class="input-container">
-        <div class="contact-input-container">
-            <form (ngSubmit)="onSubmit()" novalidate>
-                <div class="input-container-name">
-                        <input 
-                        type="text" 
-                        id="firstname" 
-                        name="firstname" 
-                        placeholder="Your Name"
-                        [(ngModel)]="name"
-                        >
-                </div>
+        <div class="input-container-mail">
+          <div>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              [(ngModel)]="email"
+            />
+          </div>
 
-                <div class="input-container-mail">
-                    <div>
-                        <input 
-                        type="email" 
-                        id="email" 
-                        name="email" 
-                        placeholder="Email"
-                        [(ngModel)]="email"
-                        >
-                    </div>
-
-                    <div>
-                        <input 
-                        type="tel" 
-                        id="phoneNumber" 
-                        name="phoneNumber" 
-                        placeholder="Phone Number"
-                        [(ngModel)]="phoneNumber"
-                        >
-                    </div>
-                </div>
-                <div class="input-container-message">
-                    <textarea 
-                    id="message" 
-                    name="message" 
-                    placeholder="Leave Your Message.."
-                    [(ngModel)]="message"
-                    ></textarea>
-                    <button type="submit">Submit</button>
-                </div>
-            </form>
+          <div>
+            <input
+              type="tel"
+              id="phoneNumber"
+              name="phoneNumber"
+              placeholder="Phone Number"
+              [(ngModel)]="phoneNumber"
+            />
+          </div>
         </div>
+        <div class="input-container-message">
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Leave Your Message.."
+            [(ngModel)]="message"
+          ></textarea>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
     </div>
+  </div>
 </div>
