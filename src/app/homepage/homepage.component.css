@@ -32,6 +32,7 @@
   top: 60px;
   box-sizing: border-box;
   z-index: 999;
+  margin: 0;
 }
 
 a {
@@ -46,7 +47,6 @@ a:hover {
 
 p {
   color: var(--font-color);
-  /* margin: 15px 0 0 0; */
   font-size: 16px;
 }
 
@@ -74,7 +74,7 @@ h6 {
   width: 100%;
   margin-left: 0;
   background-image: url(../../assets/AtticElevation.jpg),
-    linear-gradient(to bottom, white, black);
+    linear-gradient(to bottom, rgb(255, 255, 255, 0.9), rgba(0, 0, 0, 1));
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -83,6 +83,7 @@ h6 {
   flex-direction: row;
   box-sizing: border-box;
   position: inherit;
+  margin: 0;
 }
 
 .hero-heading {
@@ -100,7 +101,7 @@ h6 {
   left: 50%;
   transform: translateX(-50%);
   height: 9rem;
-  width: 25rem;
+  width: 100%;
   align-items: center;
   justify-content: center;
 }
@@ -113,7 +114,6 @@ h6 {
   font: bolder;
 }
 .hero-heading-subtitle {
-  /* border: 1px solid green; */
   display: flex;
   top: calc(25% + 9rem);
   position: absolute;
@@ -143,7 +143,6 @@ h6 {
   transition: 0.5s ease-in-out;
 }
 .hero-quote {
-  /* border: 1px solid white; */
   position: absolute;
   display: flex;
   top: 68%;
@@ -154,10 +153,30 @@ h6 {
 .hero-quote p {
   color: #edf1fe;
   font-style: italic;
+  text-align: center;
 }
 /** Breaking Points **/
-/* @media screen and (min-width: 577px) and (max-width: 992px) {
-} */
+@media screen and (max-width: 576px) {
+  .hero-quote {
+    width: 100%;
+  }
+  /* .hero-quote p {
+    text-align: center;
+  } */
+  .hero-heading-title {
+    height: 7rem;
+  }
+  .hero-heading-title h1 {
+    font-size: 80px;
+  }
+  .hero-heading-subtitle {
+    top: calc(25% + 7rem);
+  }
+  .hero-quote {
+    top: 63%;
+    width: 100%;
+  }
+}
 
 /**------------------------------------------------------------------------------
 #Project Portfolio Section 
@@ -626,18 +645,17 @@ h6 {
 /**
 Breaking Points
 **/
-
-@media screen and (min-width: 577px) and (max-width: 992px) {
-  .testimonial-quote {
-    width: 100%;
-  }
-}
-
 @media screen and (max-width: 576px) {
   .testimonial-section {
     height: fit-content;
     max-height: 70vh;
   }
+  .testimonial-quote {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
   .testimonial-quote {
     width: 100%;
   }
