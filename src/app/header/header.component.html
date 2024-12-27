@@ -1,7 +1,14 @@
 <header>
   <div class="container-box">
     <div class="logo-container">
-      <img src="assets/deceekLogo.svg" alt="Deceek Logo" class="logo" />
+      <a
+        routerLink="/home"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        style="text-decoration: none"
+      >
+        <img src="assets/deceekLogo.svg" alt="Deceek Logo" class="logo" />
+      </a>
     </div>
 
     <div class="menu-icon" (click)="toggleMenu()">
@@ -10,11 +17,56 @@
 
     <div class="desktop-menu" [class.mobile-menu]="menuValue">
       <ul>
-        <li (click)="closeMenu()">Construction</li>
-        <li (click)="closeMenu()">Projects</li>
-        <li (click)="closeMenu()">Properties</li>
-        <li (click)="closeMenu()">About</li>
-        <li (click)="closeMenu()">Login</li>
+        <li>
+          <a
+            (click)="closeMenu()"
+            routerLink="/construction"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            style="text-decoration: none"
+            >Construction</a
+          >
+        </li>
+        <li>
+          <a
+            (click)="closeMenu()"
+            routerLink="/projects"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            style="text-decoration: none"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a
+            (click)="closeMenu()"
+            routerLink="/properties"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            style="text-decoration: none"
+            >Properties</a
+          >
+        </li>
+        <li>
+          <a
+            (click)="closeMenu()"
+            routerLink="/about"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            style="text-decoration: none"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            (click)="closeMenu()"
+            routerLink="/login"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            style="text-decoration: none"
+            >Login</a
+          >
+        </li>
       </ul>
     </div>
   </div>
