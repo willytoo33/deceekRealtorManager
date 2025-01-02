@@ -6,11 +6,10 @@ import { PropertiesComponent } from './properties/properties.component';
 import { ConstructionComponent } from './construction/construction.component';
 
 export const routes: Routes = [
-  // { path: '', redirectTo: '/home', pathMatch: 'full' }, // Default route
+  { path: '', component: HomepageComponent },
   { path: 'home', component: HomepageComponent },
   { path: 'about', component: AboutComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'properties', component: PropertiesComponent },
   { path: 'construction', component: ConstructionComponent },
-  // {path:'**', component: ErrorComponent}
 ];

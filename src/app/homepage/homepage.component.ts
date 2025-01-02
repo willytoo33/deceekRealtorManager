@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { ContactFormComponent } from '../contact-form/contact-form.component';
 import { FooterComponent } from '../footer/footer.component';
-// import { SwiperModule } from 'swiper/angular';
 
 @Component({
   selector: 'app-homepage',
@@ -10,4 +9,8 @@ import { FooterComponent } from '../footer/footer.component';
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css'],
 })
-export class HomepageComponent {}
+export class HomepageComponent {
+  ngOnInit() {
+    console.log('Homepage Initialized');
+  }
+}

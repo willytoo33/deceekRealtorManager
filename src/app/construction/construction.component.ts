@@ -5,8 +5,10 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './construction.component.html',
-  styleUrl: './construction.component.css'
+  styleUrls: ['./construction.component.css'],
 })
 export class ConstructionComponent {
-
+  ngOnInit() {
+    console.log('Construction Component Initialized');
+  }
 }
