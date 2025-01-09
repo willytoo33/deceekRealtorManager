@@ -4,11 +4,10 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
 @Component({
-  selector: 'app-footer',
-  standalone: true,
-  imports: [FontAwesomeModule],
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+    selector: 'app-footer',
+    imports: [FontAwesomeModule],
+    templateUrl: './footer.component.html',
+    styleUrl: './footer.component.css'
 })
 export class FooterComponent {
   year: number = new Date().getFullYear();

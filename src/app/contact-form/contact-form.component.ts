@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-contact-form',
-  standalone: true,
-  imports: [FormsModule],
-  templateUrl: './contact-form.component.html',
-  styleUrls: ['./contact-form.component.css']
+    selector: 'app-contact-form',
+    imports: [FormsModule],
+    templateUrl: './contact-form.component.html',
+    styleUrls: ['./contact-form.component.css']
 })
 export class ContactFormComponent {
   name: string = '';
