@@ -219,7 +219,6 @@ h6 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); */
   border-radius: 1rem;
   animation: imageSlider 10s infinite;
   background-position: center;
@@ -269,21 +268,12 @@ h6 {
 
 /* Breaking Points */
 @media screen and (min-width: 577px) and (max-width: 992px) {
-  /* .project-display {
-    flex-direction: column;
-    flex-wrap: wrap;
-  } */
-
-  /* .project-container {
-    width: 400px;
-  } */
   .project-portfolio {
     height: auto;
     text-align: center;
   }
 
   .project-container {
-    /* width: 100%; */
     max-width: 50%;
     min-width: 400px;
     height: 400px;
@@ -677,16 +667,6 @@ Breaking Points
   height: 90%;
   box-sizing: border-box;
 }
-
-/***
-Breaking Points
-**/
-/* @media screen and (max-width: 576px) {
-  .contact-section {
-    display: flex;
-    flex-direction: column;
-  }
-} */
 
 /**-----------------------------------------------------------------------------------
 #Footer Section
