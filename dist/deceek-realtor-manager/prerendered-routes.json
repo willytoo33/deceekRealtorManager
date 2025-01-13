@@ -1,10 +1,3 @@
 {
-  "routes": {
-    "/": {},
-    "/about": {},
-    "/construction": {},
-    "/home": {},
-    "/projects": {},
-    "/properties": {}
-  }
+  "routes": {}
 }
