@@ -1,3 +1,148 @@
-<div class="construction-body">
-  <p>construction works!</p>
+<div class="cta-container">
+  <!-- New CTA Section -->
+  <div class="cta-section">
+    <p class="cta-text">
+      <strong>Start Your Construction Journey Today!</strong> With over 5 years
+      of proven excellence in timely project delivery, we guarantee precision
+      and quality in every build.
+      <span class="highlight"
+        >Book now to secure your spot in our 2025 construction schedule</span
+      >
+      and benefit from our exclusive early-bird consultation offer. Limited
+      slots available – let's transform your vision into reality!
+    </p>
+  </div>
+</div>
+<div class="form-container">
+  <div class="form-header">
+    <h2>Schedule Your Appointment</h2>
+    <p>Let's Build Your Vision Together</p>
+  </div>
+
+  <form
+    [formGroup]="appointmentForm"
+    (ngSubmit)="onSubmit()"
+    class="appointment-form"
+  >
+    <!-- Name Field -->
+    <div class="form-group">
+      <label>Full Name</label>
+      <input type="text" formControlName="name" />
+      <div
+        *ngIf="
+          appointmentForm.get('name')?.invalid &&
+          appointmentForm.get('name')?.touched
+        "
+        class="error-message"
+      >
+        Please enter a valid name (min 3 characters)
+      </div>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="form-row">
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" formControlName="email" />
+        <div
+          *ngIf="
+            appointmentForm.get('email')?.invalid &&
+            appointmentForm.get('email')?.touched
+          "
+          class="error-message"
+        >
+          Please enter a valid email
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Phone</label>
+        <input type="tel" formControlName="phone" placeholder="1234567890" />
+        <div
+          *ngIf="
+            appointmentForm.get('phone')?.invalid &&
+            appointmentForm.get('phone')?.touched
+          "
+          class="error-message"
+        >
+          Please enter a 10-digit phone number
+        </div>
+      </div>
+    </div>
+
+    <!-- Appointment Details -->
+    <div class="form-row">
+      <div class="form-group">
+        <label>Appointment Type</label>
+        <select formControlName="appointmentType">
+          <option value="">Select Type</option>
+          <option *ngFor="let type of appointmentTypes" [value]="type">
+            {{ type }}
+          </option>
+        </select>
+        <div
+          *ngIf="
+            appointmentForm.get('appointmentType')?.invalid &&
+            appointmentForm.get('appointmentType')?.touched
+          "
+          class="error-message"
+        >
+          Please select an appointment type
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Preferred Date</label>
+        <input type="date" formControlName="preferredDate" />
+        <div
+          *ngIf="appointmentForm.get('preferredDate')?.touched"
+          class="error-message"
+        >
+          <div
+            *ngIf="appointmentForm.get('preferredDate')?.errors?.['required']"
+          >
+            Date Required
+          </div>
+          <div
+            *ngIf="appointmentForm.get('preferredDate')?.errors?.['pastDate']"
+            class="error-message"
+          >
+            Date cannot be in the past
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Address -->
+    <div class="form-group">
+      <label>Project Address</label>
+      <textarea formControlName="projectAddress" rows="3"></textarea>
+      <div
+        *ngIf="
+          appointmentForm.get('projectAddress')?.invalid &&
+          appointmentForm.get('projectAddress')?.touched
+        "
+        class="error-message"
+      >
+        Please enter the project address
+      </div>
+    </div>
+
+    <!-- Additional Message -->
+    <div class="form-group">
+      <label>Additional Message</label>
+      <textarea
+        formControlName="message"
+        rows="4"
+        placeholder="Provide any additional details about your project..."
+      ></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <button
+      type="submit"
+      class="submit-btn"
+      [disabled]="!appointmentForm.valid"
+    >
+      Schedule Appointment
+    </button>
+  </form>
 </div>
